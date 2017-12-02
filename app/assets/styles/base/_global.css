@@ -15,9 +15,3 @@ img {
 a {
   color: $mainOrange;
 }
-footer p {
-  padding-left: 30px;
-}
-footer p a.btn {
-  padding-left: 20px;
-}
