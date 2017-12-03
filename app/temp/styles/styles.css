@@ -1095,7 +1095,12 @@ Instead edit gulp/templates/sprite */
 @media (min-width: 800px) {
 
   .site-header {
+    position: fixed;
     background-color: rgba(47,85,114, .3);
+  }
+
+  .site-header--dark {
+    background-color: rgba(23, 51, 72, .85);
   }
 }
 
@@ -1114,6 +1119,9 @@ Instead edit gulp/templates/sprite */
           transform: translateX(-50%) scale(.8);
   -webkit-transform-origin: 50% 0%;
           transform-origin: 50% 0%;
+  transition: -webkit-transform .6s ease-in-out;
+  transition: transform .6s ease-in-out;
+  transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out;
   background-color: #2f5572;
   padding: 25px 36px;
 }
@@ -1124,6 +1132,11 @@ Instead edit gulp/templates/sprite */
     left: auto;
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+
+  .site-header--dark .site-header__logo {
+    -webkit-transform: scale(.55);
+            transform: scale(.55);
   }
 }
 
@@ -1306,6 +1319,10 @@ Instead edit gulp/templates/sprite */
     font-size: 1rem;
     padding: 12px 0;
     background-color: transparent;
+  }
+
+  .primary-nav a.is-current-link {
+    color: #fabb69;
   }
 }
 
